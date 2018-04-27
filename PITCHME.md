@@ -178,12 +178,12 @@ Note that Only 10 items are listed
 
 ### Anayze By Year (Raw Query Params)
 
-|name|value|Note|
-|---|---||
-|facet.date|time||
-|facet.date.start|NOW/YEAR/DAY-5YEARS||
-|facet.date.end|NOW/YEAR/DAY+1YEAR|+ --> %2B|
-|facet.date.gap|+1YEAR|+ --> %2B|
+|name|value|
+|---|---|
+|facet.date|time|
+|facet.date.start|NOW/YEAR/DAY-5YEARS|
+|facet.date.end|NOW/YEAR/DAY+1YEAR|
+|facet.date.gap|+1YEAR|
 
     &facet.date=time&facet.date.start=NOW/YEAR/DAY-5YEARS&facet.date.end=NOW/YEAR/DAY%2B1YEAR&facet.date.gap=%2B1YEAR
 

@@ -180,7 +180,7 @@ Note that Only 10 items are listed
 
 |name|value|Note|
 |---|---||
-|facet.date|time|}
+|facet.date|time||
 |facet.date.start|NOW/YEAR/DAY-5YEARS||
 |facet.date.end|NOW/YEAR/DAY+1YEAR|+ --> %2B|
 |facet.date.gap|+1YEAR|+ --> %2B|

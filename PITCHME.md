@@ -164,7 +164,7 @@ Note that Only 10 items are listed
 
 +++
 
-### Analyze year (By Facet)
+### Analyze year (By DATE Facet)
 
 |name|value|
 |---|---|
@@ -172,6 +172,18 @@ Note that Only 10 items are listed
 |start      | `0` |
 |rows       | `0` |
 |facet      | `true` |
+|Raw Query Parameters|See following slides|
+
++++
+
+### Anayze By Year (Raw Query Params)
+
+|name|value|Note|
+|---|---||
+|facet.date|time|}
+|facet.date.start|NOW/YEAR/DAY-5YEARS||
+|facet.date.end|NOW/YEAR/DAY+1YEAR|+ --> %2B|
+|facet.date.gap|+1YEAR|+ --> %2B|
 
     &facet.date=time&facet.date.start=NOW/YEAR/DAY-5YEARS&facet.date.end=NOW/YEAR/DAY%2B1YEAR&facet.date.gap=%2B1YEAR
 

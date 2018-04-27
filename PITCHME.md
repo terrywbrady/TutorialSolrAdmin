@@ -162,6 +162,7 @@ Note that Only 10 items are listed
 
 ### Analyze Fields (By Facet)
 
+|---|---:|
 |q| `*:*` |   
 |start| `0` |
 |rows| `0` |

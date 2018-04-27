@@ -162,13 +162,12 @@ Note that Only 10 items are listed
 
 ### Analyze Fields (By Facet)
 
-@ul
-- q: `*:*`    
-- start: `0`
-- rows: `0`
-- facet: `true`
-- facet.field: `time`
-@ulend
+field|value
+q|`*:*`    
+start| `0`
+rows| `0`
+facet| `true`
+facet.field| `time`
 
 ---
 ### Document Counts

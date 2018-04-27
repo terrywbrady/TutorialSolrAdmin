@@ -164,10 +164,10 @@ Note that Only 10 items are listed
 
 |name|value|
 |---|---:|
-|q| `*:*` |   
-|start| `0` |
-|rows| `0` |
-|facet| `true` |
+|q          | ```*:*``` |   
+|start      | `0` |
+|rows       | `0` |
+|facet      | `true` |
 |facet.field| `time` |
 
 ---

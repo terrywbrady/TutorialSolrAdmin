@@ -213,6 +213,19 @@ Note that Only 10 items are listed
 
     &facet.date=time&facet.date.start=NOW/MONTH/DAY-18MONTHS&facet.date.end=NOW/MONTH/DAY%2B3MONTHS&facet.date.gap=%2B3MONTHS
 
++++
+
+### Last 7 Days (Raw Query Params)
+
+|name|value|
+|---|---|
+|facet.date|time|
+|facet.date.start|NOW/DAY-7DAYS|
+|facet.date.end|NOW/DAY+1DAY|
+|facet.date.gap|+1DAY|
+
+    &facet.date=time&facet.date.start=NOW/DAY-7DAYS&facet.date.end=NOW/DAY%2B1DAY&facet.date.gap=%2B1DAY
+
 ---
 ### Document Counts
 The first step of the tutorial will be to query for all documents in the Solr repository (q=*:*).  We will review the documents that are returned and note the count of objects that are returned.  We will also note the named fields in each resulting document.  We will manipulate the start index and result count to vary the number of documents returned.  We will manipulate the field list parameter to alter the amount of data that is returned from the query.  We will also manipulate the output format for the query illustrating how to return JSON, XML, or CSV from the query.

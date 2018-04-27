@@ -67,13 +67,61 @@ https://github.com/terrywbrady/info
 #### q
     *:*
 
-### Modify Rows
+Note that Only 10 items are listed
+
++++
+
+### Query All, View Only Item 1
 
 #### q
-    *:*
-    
+    *:*    
 #### rows
     1
+
++++
+
+### Query All, View Only Item 2
+
+#### q
+    *:*    
+#### start
+    1
+#### rows
+    1
+
++++
+
+### Change Output Format
+
+- XML
+- CSV
+- JSON
+
++++
+
+### List only time and ip address
+
+#### q
+    *:*    
+#### start
+    1
+#### rows
+    1
+#### fl
+    time,ip
+
++++
+
+### List 20 items
+
+#### q
+    *:*    
+#### start
+    0
+#### rows
+    20
+#### fl
+    time,ip
 
 ---
 ### Document Counts

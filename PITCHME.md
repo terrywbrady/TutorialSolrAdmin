@@ -1,4 +1,4 @@
-## Examining Your Repository under the Hood from the Solr Admin Console
+﻿## Examining Your Repository under the Hood from the Solr Admin Console
 
 Terry Brady
 
@@ -9,8 +9,59 @@ https://github.com/terrywbrady/info
 ![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
 
 ---
+### SOLR in DSpace
+
+- Search / Discovery
+- OAI Harvest Index
+- Statistics 
+- Authority Index (Optional)
+
++++
+
+### Accessing SOLR
+
+- In DSpace, SOLR Admin access is generally restricted to local server
+- Overriding localhost restriction
+  - Essential for production
+- https://github.com/DSpace/DSpace/blob/dspace-6_x/dspace-solr/src/main/webapp/WEB-INF/web.xml#L52-L56
+
++++?code=https://raw.githubusercontent.com/DSpace/DSpace/blob/dspace-6_x/dspace-solr/src/main/webapp/WEB-INF/web.xml
+@[52-56](Uncomment these lines to remove the local restriction)
+
+---
 ### Tour of the Admin Console
-The Solr Admin Console can be intimidating to a new user.  Some actions available in the console could be destructive to a repository.  The presentation will provide a tour of the admin console and highlight the user-friendly components.  The majority of the presentation will focus on the Query tab of the console.
+
+- Caution - The Solr Admin Console has some options that are destructive
+- Presentation will focus on safe operations
+
++++
+### Core Selector
+![](images/core.png)
+
++++
+### Core Overview 
+![](images/tOver.png)
+
++++
+### Core Query
+![](images/tQuery.png)
+
++++
+### Schema Browser
+![](images/tSchema.png)
+
++++
+### Document Add (for testing)
+![](images/tDoc.png)
+
+---
+
+### Load Sample Statistics Data (if needed)
+
+(Link to be added)
+
+---
+
 ---
 ### Document Counts
 The first step of the tutorial will be to query for all documents in the Solr repository (q=*:*).  We will review the documents that are returned and note the count of objects that are returned.  We will also note the named fields in each resulting document.  We will manipulate the start index and result count to vary the number of documents returned.  We will manipulate the field list parameter to alter the amount of data that is returned from the query.  We will also manipulate the output format for the query illustrating how to return JSON, XML, or CSV from the query.
@@ -25,4 +76,4 @@ Solr provides powerful capabilities to facet values by date.  Using the sample r
 ### Schema Browser
 The Solr Schema browser can also provide insight about the fields within a Solr repository.  We will take a brief look at this tab of the console and show how it can confirm some of our previous discoveries.
 Looking at another Solr Repo
-Each DSpace instance contains at least 3-4 separate Solr instances.  The presentation will take a brief tour of the DSpace “search” repository illustrating how the lessons learned from the statistics repository could be applied to a Solr repository with a different schema.
+Each DSpace instance contains at least 3-4 separate Solr instances.  The presentation will take a brief tour of the DSpace â€œsearchâ€� repository illustrating how the lessons learned from the statistics repository could be applied to a Solr repository with a different schema.

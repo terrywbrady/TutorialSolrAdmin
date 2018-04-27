@@ -99,7 +99,7 @@ Note that Only 10 items are listed
 
 +++
 
-### List only time and ip address
+### List specific fields
 
 #### q
     *:*    
@@ -108,7 +108,7 @@ Note that Only 10 items are listed
 #### rows
     1
 #### fl
-    time,ip
+    statistics_type, type, time
 
 +++
 
@@ -121,7 +121,56 @@ Note that Only 10 items are listed
 #### rows
     20
 #### fl
-    time,ip
+    statistics_type, type, time
+    
+---
+
+### Analyze Fields (Schema Browser)
+
+- statistics_type
+- type    
+    
++++
+
+### Analyze Fields (By Facet)
+
+#### q
+    *:*    
+#### start
+    0
+#### rows
+    0
+#### facet=true
+#### facet.field
+    statistics_type
+
++++
+
+### Analyze Fields (By Facet)
+
+#### q
+    *:*    
+#### start
+    0
+#### rows
+    0
+#### facet=true
+#### facet.field
+    type
+
++++
+
+### Analyze Fields (By Facet)
+
+#### q
+    *:*    
+#### start
+    0
+#### rows
+    0
+#### facet=true
+#### facet.field
+    time
 
 ---
 ### Document Counts

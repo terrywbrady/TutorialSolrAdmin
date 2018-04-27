@@ -62,6 +62,19 @@ https://github.com/terrywbrady/info
 
 ---
 
+### Query All Items
+
+#### q
+    *:*
+
+### Modify Rows
+
+#### q
+    *:*
+    
+#### rows
+    1
+
 ---
 ### Document Counts
 The first step of the tutorial will be to query for all documents in the Solr repository (q=*:*).  We will review the documents that are returned and note the count of objects that are returned.  We will also note the named fields in each resulting document.  We will manipulate the start index and result count to vary the number of documents returned.  We will manipulate the field list parameter to alter the amount of data that is returned from the query.  We will also manipulate the output format for the query illustrating how to return JSON, XML, or CSV from the query.

@@ -176,7 +176,7 @@ Note that Only 10 items are listed
 
 +++
 
-### Anayze By Year (Raw Query Params)
+### Last 5 Years (Raw Query Params)
 
 |name|value|
 |---|---|
@@ -186,6 +186,32 @@ Note that Only 10 items are listed
 |facet.date.gap|+1YEAR|
 
     &facet.date=time&facet.date.start=NOW/YEAR/DAY-5YEARS&facet.date.end=NOW/YEAR/DAY%2B1YEAR&facet.date.gap=%2B1YEAR
+
++++
+
+### Last 12 Months (Raw Query Params)
+
+|name|value|
+|---|---|
+|facet.date|time|
+|facet.date.start|NOW/MONTH/DAY-12MONTHS|
+|facet.date.end|NOW/MONTH/DAY+1MONTH|
+|facet.date.gap|+1MONTH|
+
+    &facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH
+
++++
+
+### Last 6 Quarters (Raw Query Params)
+
+|name|value|
+|---|---|
+|facet.date|time|
+|facet.date.start|NOW/MONTH/DAY-18MONTHS|
+|facet.date.end|NOW/MONTH/DAY+3MONTHS|
+|facet.date.gap|+3MONTHS|
+
+    &facet.date=time&facet.date.start=NOW/MONTH/DAY-18MONTHS&facet.date.end=NOW/MONTH/DAY%2B3MONTHS&facet.date.gap=%2B3MONTHS
 
 ---
 ### Document Counts

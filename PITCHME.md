@@ -134,36 +134,32 @@ Note that Only 10 items are listed
 
 ### Analyze Fields (By Facet)
 
-#### q
-    *:*    
-#### start
-    0
-#### rows
-    0
-#### facet=true
-#### facet.field
-    statistics_type
-
-+++
-
-### Analyze Fields (By Facet)
-
-#### q
-    *:*    
-#### start
-    0
-#### rows
-    0
-#### facet=true
-#### facet.field
-    type
+|name|value|
+|---|---|
+|q          | `*:*` |   
+|start      | `0` |
+|rows       | `0` |
+|facet      | `true` |
+|facet.field| `statistics_type` |
 
 +++
 
 ### Analyze Fields (By Facet)
 
 |name|value|
-|---|---:|
+|---|---|
+|q          | `*:*` |   
+|start      | `0` |
+|rows       | `0` |
+|facet      | `true` |
+|facet.field| `type` |
+
++++
+
+### Analyze Fields (By Facet)
+
+|name|value|
+|---|---|
 |q          | `*:* the quick brown fox jumped over the lazy dogs` |   
 |start      | `0` |
 |rows       | `0` |

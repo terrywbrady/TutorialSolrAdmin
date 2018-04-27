@@ -164,7 +164,7 @@ Note that Only 10 items are listed
 
 +++
 
-### Analyze time (By Facet)
+### Analyze year (By Facet)
 
 |name|value|
 |---|---|
@@ -172,7 +172,8 @@ Note that Only 10 items are listed
 |start      | `0` |
 |rows       | `0` |
 |facet      | `true` |
-|Raw Query Parameters|`&facet.date=time&facet.date.start=NOW/YEAR/DAY-5YEARS&facet.date.end=NOW/YEAR/DAY%2B1YEAR&facet.date.gap=%2B1YEAR`|
+
+    &facet.date=time&facet.date.start=NOW/YEAR/DAY-5YEARS&facet.date.end=NOW/YEAR/DAY%2B1YEAR&facet.date.gap=%2B1YEAR
 
 ---
 ### Document Counts

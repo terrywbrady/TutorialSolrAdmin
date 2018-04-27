@@ -164,7 +164,7 @@ Note that Only 10 items are listed
 
 |name|value|
 |---|---:|
-|q          | `*:*` |   
+|q          | `*:* the quick brown fox jumped over the lazy dogs` |   
 |start      | `0` |
 |rows       | `0` |
 |facet      | `true` |

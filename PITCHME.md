@@ -164,7 +164,7 @@ Note that Only 10 items are listed
 
 |name|value|
 |---|---:|
-|q          | <code>`*:*`</code> |   
+|q          | `*:*` |   
 |start      | `0` |
 |rows       | `0` |
 |facet      | `true` |

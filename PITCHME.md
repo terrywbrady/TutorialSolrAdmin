@@ -64,8 +64,9 @@ https://github.com/terrywbrady/info
 
 ### Query All Items
 
-#### q
-    *:*
+|name|value|
+|---|---|
+|q     | `*:*` |   
 
 Note that Only 10 items are listed
 
@@ -73,21 +74,20 @@ Note that Only 10 items are listed
 
 ### Query All, View Only Item 1
 
-#### q
-    *:*    
-#### rows
-    1
+|name|value|
+|---|---|
+|q     | `*:*` |   
+|rows  | `1` |
 
 +++
 
 ### Query All, View Only Item 2
 
-#### q
-    *:*    
-#### start
-    1
-#### rows
-    1
+|name|value|
+|---|---|
+|q     | `*:*` |   
+|start | `1` |
+|rows  | `1` |
 
 +++
 
@@ -101,27 +101,23 @@ Note that Only 10 items are listed
 
 ### List specific fields
 
-#### q
-    *:*    
-#### start
-    1
-#### rows
-    1
-#### fl
-    statistics_type, type, time
+|name|value|
+|---|---|
+|q     | `*:*` |   
+|start | `1` |
+|rows  | `1` |
+|fl    | `statistics_type, type, time` |
 
 +++
 
 ### List 20 items
 
-#### q
-    *:*    
-#### start
-    0
-#### rows
-    20
-#### fl
-    statistics_type, type, time
+|name|value|
+|---|---|
+|q     | `*:*` |   
+|start | `0` |
+|rows  | `20` |
+|fl    | `statistics_type, type, time` |
     
 ---
 

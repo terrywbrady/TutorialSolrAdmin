@@ -302,11 +302,16 @@ Note that Only 10 items are listed
 
 ---
 
+### Our Custom Solr App
+
+- DigitalGeorgetown
+  - DSpace has collected 12 million records over the past 7 years
+  - Stats Queries are relatively fast considering the volume
+
++++
+
 ### Sample Application Built With Solr Queries
 
-- DigitalGeorgetown 
-  - DSpace has collected 12 million records over the past 7 years
-  - Queries are relatively fast considering the volume
 - Statistics Reporting Tool
   - PHP Application for Repository Admins
   - Supplements statistics reports in DSpace
@@ -317,7 +322,7 @@ Note that Only 10 items are listed
 
 ![DigitalGeorgetown Statistics Reporting Tool](https://www.youtube.com/embed/VL3S2BmvXSU)
 
-+++?code=https://raw.githubusercontent.com/Georgetown-University-Libraries/batch-tools/master/web/stats/solrFacets.php
++++?code=https://raw.githubusercontent.com/Georgetown-University-Libraries/batch-tools/master/web/stats/solrFacets.php&lang=php
 @[16-20](Date Query Construction)
 @[21-25](Date Query Construction)
 @[44-55](Queries based on DSpace Hierarchical Levels)

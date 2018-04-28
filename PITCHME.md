@@ -244,7 +244,9 @@ Note that Only 10 items are listed
 |start      | `0` |
 |rows       | `0` |
 |facet      | `true` |
-|Raw Query Parameters|`&facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH`|
+
+Raw Query Parameters
+    &facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH
 
 +++
 
@@ -256,7 +258,9 @@ Note that Only 10 items are listed
 |start      | `0` |
 |rows       | `0` |
 |facet      | `true` |
-|Raw Query Parameters|`&facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH`|
+
+Raw Query Parameters
+    &facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH
 
 +++
 
@@ -280,20 +284,30 @@ Note that Only 10 items are listed
 
 |name|value|
 |---|---|
-|q | `NOT(type:*)  AND scopeType:3` |   
+|q | `NOT(type:*) AND scopeType:3` |   
+
++++
+
+### Complex Queries - RANGE Query
+
+|name|value|
+|---|---|
+|q | `NOT(type:*) AND scopeType:[3 TO 4]` |   
+
++++
+
+### Complex Queries - DATE RANGE QUERY
+
+|name|value|
+|---|---|
+|q | `NOT(type:*) AND time:[NOW-7MONTHS TO NOW]` |   
 
 ---
-### Document Counts
-The first step of the tutorial will be to query for all documents in the Solr repository (q=*:*).  We will review the documents that are returned and note the count of objects that are returned.  We will also note the named fields in each resulting document.  We will manipulate the start index and result count to vary the number of documents returned.  We will manipulate the field list parameter to alter the amount of data that is returned from the query.  We will also manipulate the output format for the query illustrating how to return JSON, XML, or CSV from the query.
----
-### Query Construction
-The next step of the tutorial will be construct a query on a text field, on a numeric field, and on a date field.  Once we have studied how to query on a single field, we will construct queries with AND, OR, and NOT.  Lastly, we will alter the sort options to change the order of the results.
----
-### Result Faceting
-The next step of the tutorial will be manipulate facet parameters to analyze the contents of the Solr repository.  In the example of the DSpace statistics repository, we will demonstrate how search facets can help to identify new bots and web crawlers. 
-Solr provides powerful capabilities to facet values by date.  Using the sample repository data, we will analyze user activity over various time ranges.  The presentation will then demonstrate a DSpace statistics reporting dashboard constructed from numerous individual Solr queries.
+
+### Sample Application Built With Solr Queries
+
+![DigitalGeorgetown Statistics Reporting Tool](https://www.youtube.com/embed/VL3S2BmvXSU)
+
 ---
 ### Schema Browser
-The Solr Schema browser can also provide insight about the fields within a Solr repository.  We will take a brief look at this tab of the console and show how it can confirm some of our previous discoveries.
-Looking at another Solr Repo
 Each DSpace instance contains at least 3-4 separate Solr instances.  The presentation will take a brief tour of the DSpace â€œsearchâ€� repository illustrating how the lessons learned from the statistics repository could be applied to a Solr repository with a different schema.

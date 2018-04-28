@@ -245,7 +245,6 @@ Note that Only 10 items are listed
 |rows       | `0` |
 |facet      | `true` |
 
-Raw Query Parameters
     &facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH
 
 +++
@@ -259,7 +258,6 @@ Raw Query Parameters
 |rows       | `0` |
 |facet      | `true` |
 
-Raw Query Parameters
     &facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH
 
 +++
@@ -306,7 +304,32 @@ Raw Query Parameters
 
 ### Sample Application Built With Solr Queries
 
+- DigitalGeorgetown 
+  - DSpace has collected 12 million records over the past 7 years
+  - Queries are relatively fast considering the volume
+- Statistics Reporting Tool
+  - PHP Application for Repository Admins
+  - Supplements statistics reports in DSpace
+  - Additional bot filtering via Solr queries
+  
++++  
+### Demo: DigitalGeorgetown Statistics Reporting Tool   
+
 ![DigitalGeorgetown Statistics Reporting Tool](https://www.youtube.com/embed/VL3S2BmvXSU)
+
++++?code=https://raw.githubusercontent.com/Georgetown-University-Libraries/batch-tools/master/web/stats/solrFacets.php
+@[16-20](Date Query Construction)
+@[21-25](Date Query Construction)
+@[44-55](Queries based on DSpace Hierarchical Levels)
+@[64-71](Distinguishing Downloads from Thumbnail Views)
+@[72-83](Distinguishing full text and faceted searches)
+
+---
+### Working with a different Solr Repository
+
+
+
+
 
 ---
 ### Schema Browser

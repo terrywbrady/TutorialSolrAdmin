@@ -1,4 +1,4 @@
-﻿## Examining Your Repository under the Hood from the Solr Admin Console
+## Examining Your Repository under the Hood from the Solr Admin Console
 
 Terry Brady
 
@@ -162,6 +162,14 @@ Note that Only 10 items are listed
 |facet      | `true` |
 |facet.field| `time` |
 
+---
+
+### Adding a Date Facet
+
+- Use the Raw Query Parameters Field for search parameters that do not appear on the form
+- Urlencode special characters
+- In the following example `+` becomes `%2B`
+
 +++
 
 ### Analyze year (By DATE Facet)
@@ -225,6 +233,54 @@ Note that Only 10 items are listed
 |facet.date.gap|+1DAY|
 
     &facet.date=time&facet.date.start=NOW/DAY-7DAYS&facet.date.end=NOW/DAY%2B1DAY&facet.date.gap=%2B1DAY
+
+---
+
+### Combining Search with a Date Facet
+
+|name|value|
+|---|---|
+|q          | `statistics_type:search` |   
+|start      | `0` |
+|rows       | `0` |
+|facet      | `true` |
+|Raw Query Parameters|`&facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH`|
+
++++
+
+### Combining Search with a Date Facet
+
+|name|value|
+|---|---|
+|q          | `statistics_type:view` |   
+|start      | `0` |
+|rows       | `0` |
+|facet      | `true` |
+|Raw Query Parameters|`&facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH`|
+
++++
+
+### Complex Queries - NOT Syntax
+
+|name|value|
+|---|---|
+|q | `NOT(statistics_type:*)` |   
+
++++
+
+### Complex Queries - NOT Syntax
+
+|name|value|
+|---|---|
+|q | `NOT(type:*)` |   
+
++++
+
+### Complex Queries - AND Clause
+
+|name|value|
+|---|---|
+|q | `NOT(type:*)  AND scopeType:3` |   
 
 ---
 ### Document Counts

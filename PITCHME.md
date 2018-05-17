@@ -22,11 +22,19 @@ https://github.com/terrywbrady/info
 
 - In DSpace, SOLR Admin access is generally restricted to local server
 - Overriding localhost restriction
-  - Essential for production
+  - Only for testing - be careful in production production
 - https://github.com/DSpace/DSpace/blob/dspace-6_x/dspace-solr/src/main/webapp/WEB-INF/web.xml#L52-L56
 
-+++?code=https://raw.githubusercontent.com/DSpace/DSpace/blob/dspace-6_x/dspace-solr/src/main/webapp/WEB-INF/web.xml
-@[52-56](Uncomment these lines to remove the local restriction)
++++
+
+Comment out the following for testing
+
+    <!-- Any path (name) registered in solrconfig.xml will be sent to that filter -->
+    <filter>
+      <filter-name>LocalHostRestrictionFilter</filter-name>
+      <filter-class>org.dspace.solr.filters.LocalHostRestrictionFilter</filter-class>
+    </filter>
+
 
 ---
 ### Tour of the Admin Console
@@ -58,7 +66,10 @@ https://github.com/terrywbrady/info
 
 ### Load Sample Statistics Data (if needed)
 
-(Link to be added)
+- [Sample Stats Records](sample-data/stats.csv)
+- This data was pulled from a DSpace 5 test instance
+- Numeric identifiers for item/community/collection are instance specific
+- IP data has been masked
 
 ---
 

@@ -338,4 +338,4 @@ Note that Only 10 items are listed
 
 ---
 ### Schema Browser
-Each DSpace instance contains at least 3-4 separate Solr instances.  The presentation will take a brief tour of the DSpace â€œsearchâ€� repository illustrating how the lessons learned from the statistics repository could be applied to a Solr repository with a different schema.
+Each DSpace instance contains at least 3-4 separate Solr instances.  The presentation will take a brief tour of the DSpace "search" repository illustrating how the lessons learned from the statistics repository could be applied to a Solr repository with a different schema.

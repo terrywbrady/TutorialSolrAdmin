@@ -66,7 +66,8 @@ Comment out the following for testing
 
 ### Load Sample Statistics Data (if needed)
 
-- [Sample Stats Records](sample-data/stats.csv)
+- [Sample Stats Records - 5 records](sample-data/statsSmall.csv)
+- [Sample Stats Records - 5000 records](sample-data/stats.csv)
 - This data was pulled from a DSpace 5 test instance
 - Numeric identifiers for item/community/collection are instance specific
 - IP data has been masked

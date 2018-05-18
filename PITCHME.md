@@ -104,6 +104,7 @@ Note that Only 10 items are listed
 
 +++
 
+```
     "response": {
       "numFound": 5389,
       "start": 0,
@@ -124,6 +125,8 @@ Note that Only 10 items are listed
         }
       ]
     }
+```
+
 +++
 
 ### Query All, View Only Item 2

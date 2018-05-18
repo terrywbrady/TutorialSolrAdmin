@@ -319,7 +319,8 @@ Note that Only 10 items are listed
 ### Our Custom Solr App
 
 - DigitalGeorgetown
-  - DSpace has collected 12 million records over the past 7 years
+  - DSpace has collected 31 million records over the past 7 years
+    - With simple bot filtering: 22 million
   - Stats Queries are relatively fast considering the volume
 
 +++
@@ -334,7 +335,7 @@ Note that Only 10 items are listed
 +++  
 ### Demo: DigitalGeorgetown Statistics Reporting Tool   
 
-![DigitalGeorgetown Statistics Reporting Tool](https://www.youtube.com/embed/VL3S2BmvXSU)
+![DigitalGeorgetown Statistics Reporting Tool](images/rptTool.gif)
 
 +++?code=https://raw.githubusercontent.com/Georgetown-University-Libraries/batch-tools/master/web/stats/solrFacets.php&lang=php
 @[16-20](Date Query Construction)

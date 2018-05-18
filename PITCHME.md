@@ -136,6 +136,7 @@ Note that Only 10 items are listed
 
 +++
 
+```
     "response": {
       "numFound": 5389,
       "start": 1,
@@ -167,6 +168,8 @@ Note that Only 10 items are listed
         }
       ]
     }
+```
+
 +++
 
 ### Change Output Format
@@ -177,6 +180,7 @@ Note that Only 10 items are listed
 
 +++
 
+```
     <result name="response" numFound="5389" start="1">
       <doc>
         <str name="ip">0:0:0:0:0:0:0:1</str>
@@ -203,11 +207,16 @@ Note that Only 10 items are listed
         <str name="uid">0f46bfbf-b7fc-4b2a-bbce-e47d339a3d5b</str>
         <long name="_version_">1599479565228441600</long></doc>
     </result>
+```
+
 +++
 
+```
     continent,isBot,submitter,statistics_type,previousWorkflowStep,city,latitude,type,uid,owningItem,scopeType,countryCode,sortBy,id,owningComm,longitude,owner,scopeId,workflowItemId,ip,query,dns,workflowStep,userAgent,actor,referrer,rpp,_version_,sortOrder,bundleName,time,epersonid,owningColl
     "",false,,view,,,,0,0f46bfbf-b7fc-4b2a-bbce-e47d339a3d5b,3084542e-d880-47ce-bfb5-50c19a1aff5b,,,,2d6e8422-9858-40bc-9507-5a195aadc6db,7c40107e-5bf2-48b0-82be-b36df7c1c415,,,,,0:0:0:0:0:0:0:1,,localhost.,,"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36",,http://localhost:9080/xmlui/discover?filtertype=author&filter_relational_operator=equals&filter=User%2C+Demo,,1599479565228441600,,THUMBNAIL,2018-05-03T14:23:00.395Z,,24db41d0-51ae-472e-9f41-3319d8aaef2e
     
+```
+
 +++
 
 ### List specific fields

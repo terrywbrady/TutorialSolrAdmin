@@ -398,6 +398,8 @@ Note that Only 10 items are listed
 
 #### Solr Field Analysis - Discovery View
 
++++
+
 ![Screenshot](images/disc4.png)
 
 

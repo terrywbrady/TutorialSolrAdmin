@@ -347,6 +347,9 @@ Note that Only 10 items are listed
 ---
 ### Working with a different Solr Repository
 
+Each DSpace instance contains at least 3-4 separate Solr instances.  
+
+The presentation will take a brief tour of the DSpace "search" repository illustrating how the lessons learned from the statistics repository could be applied to a Solr repository with a different schema.
 +++
 
 #### Sample Data Collection
@@ -401,10 +404,26 @@ Note that Only 10 items are listed
 
 +++
 
-![Screenshot](images/disc4.png)
-
+![Screenshot](images/schemaAuthor.png)
 
 +++
+
+![Screenshot](images/schemaDate.png)
+
++++
+
+![Screenshot](images/schemaSubject.png)
+
++++
+
+![Screenshot](images/schemaTitle.png)
+
++++
+
+![Screenshot](images/schemaFullText.png)
+
++++
+
 
 ### What Can We Learn?
 
@@ -464,6 +483,3 @@ Note that Only 10 items are listed
 ![Screenshot](images/discres2.png)
 
 
----
-### Schema Browser
-Each DSpace instance contains at least 3-4 separate Solr instances.  The presentation will take a brief tour of the DSpace "search" repository illustrating how the lessons learned from the statistics repository could be applied to a Solr repository with a different schema.

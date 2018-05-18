@@ -347,7 +347,10 @@ Note that Only 10 items are listed
 ### Working with a different Solr Repository
 
 +++
+
 #### Sample Data Collection
+
++++
 
 ![Screenshot](images/disc1.png)
 
@@ -355,23 +358,23 @@ Note that Only 10 items are listed
 
 #### Sample Item with Image Bitstream - Summary View
 
++++
+
 ![Screenshot](images/disc2a.png)
 
 +++
 
 #### Sample Item with Image Bitstream - Full View
 
++++
+
 ![Screenshot](images/disc2b.png)
 
 +++
 
-#### Sample Item with Image Bitstream - Solr View
-
-![Screenshot](images/disc2c.gif)
+#### Sample Item with Fulltext Bitstream - Summary View
 
 +++
-
-#### Sample Item with Fulltext Bitstream - Summary View
 
 ![Screenshot](images/disc3a.png)
 
@@ -379,25 +382,84 @@ Note that Only 10 items are listed
 
 #### Sample Item with Fulltext Bitstream - Full View
 
++++
+
 ![Screenshot](images/disc3b.png)
 
 +++
 
 #### Sample Item with Fulltext Bitstream - Bitstream View
 
-![Screenshot](images/disc3c.png)
-
 +++
 
-#### Sample Item with Image Bitstream - Solr View
-
-![Screenshot](images/disc3d.gif)
+![Screenshot](images/disc3c.png)
 
 +++
 
 #### Solr Field Analysis - Discovery View
 
 ![Screenshot](images/disc4.png)
+
+
++++
+
+### What Can We Learn?
+
+- Field called "handle"
+- Field called "fulltext"
+- Field called "location.coll"
+
++++
+
+### Search for our handle
+
+|name|value|
+|---|---|
+|q | `handle:123456789/27` |   
+
++++
+
+### View the results, note that there is a field called "title"
+
++++
+
+### Search for our handle
+
+|name|value|
+|---|---|
+|q | `handle:123456789/27` |   
+|fl | `handle,title,location.coll,fulltext` |   
+
++++
+
+![Screenshot](images/discres0.png)
+
++++
+
+### Search by location.coll
+
+|name|value|
+|---|---|
+|q | `location.coll:71cf5a49-4607-4cfe-b395-1ea2d6e6af87` |   
+|fl | `handle,title` |   
+
++++
+
+![Screenshot](images/discres1.png)
+
++++
+
+### Search by location.coll and fulltext
+
+|name|value|
+|---|---|
+|q | `location.coll:71cf5a49-4607-4cfe-b395-1ea2d6e6af87 AND fulltext:*` |   
+|fl | `handle,title` |   
+
++++
+
+![Screenshot](images/discres2.png)
+
 
 ---
 ### Schema Browser

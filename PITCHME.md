@@ -86,6 +86,15 @@ Note that Only 10 items are listed
 
 +++
 
+    "response": {
+      "numFound": 5389,
+      "start": 0,
+      "docs": [
+        ...
+      ]
+    }
++++
+
 ### Query All, View Only Item 1
 
 |name|value|
@@ -93,6 +102,28 @@ Note that Only 10 items are listed
 |q     | `*:*` |   
 |rows  | `1` |
 
++++
+
+    "response": {
+      "numFound": 5389,
+      "start": 0,
+      "docs": [
+        {
+          "ip": "0:0:0:0:0:0:0:1",
+          "referrer": "http://localhost:9080/xmlui/",
+          "dns": "localhost.",
+          "userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36",
+          "isBot": false,
+          "time": "2018-05-03T14:22:58.686Z",
+          "query": [
+            "author_keyword:User,\\ Demo"
+          ],
+          "statistics_type": "search",
+          "uid": "2e964339-52c1-4e4e-a872-c1fa929f47b7",
+          "_version_": 1599479562937303000
+        }
+      ]
+    }
 +++
 
 ### Query All, View Only Item 2
@@ -105,12 +136,78 @@ Note that Only 10 items are listed
 
 +++
 
+    "response": {
+      "numFound": 5389,
+      "start": 1,
+      "docs": [
+        {
+          "ip": "0:0:0:0:0:0:0:1",
+          "referrer": "http://localhost:9080/xmlui/discover?filtertype=author&filter_relational_operator=equals&filter=User%2C+Demo",
+          "dns": "localhost.",
+          "userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36",
+          "isBot": false,
+          "id": "2d6e8422-9858-40bc-9507-5a195aadc6db",
+          "type": 0,
+          "owningItem": [
+            "3084542e-d880-47ce-bfb5-50c19a1aff5b"
+          ],
+          "owningColl": [
+            "24db41d0-51ae-472e-9f41-3319d8aaef2e"
+          ],
+          "owningComm": [
+            "7c40107e-5bf2-48b0-82be-b36df7c1c415"
+          ],
+          "time": "2018-05-03T14:23:00.395Z",
+          "bundleName": [
+            "THUMBNAIL"
+          ],
+          "statistics_type": "view",
+          "uid": "0f46bfbf-b7fc-4b2a-bbce-e47d339a3d5b",
+          "_version_": 1599479565228441600
+        }
+      ]
+    }
++++
+
 ### Change Output Format
 
 - XML
 - CSV
 - JSON
 
++++
+
+    <result name="response" numFound="5389" start="1">
+      <doc>
+        <str name="ip">0:0:0:0:0:0:0:1</str>
+        <str name="referrer">http://localhost:9080/xmlui/discover?filtertype=author&filter_relational_operator=equals&filter=User%2C+Demo</str>
+        <str name="dns">localhost.</str>
+        <str name="userAgent">Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36</str>
+        <bool name="isBot">false</bool>
+        <str name="id">2d6e8422-9858-40bc-9507-5a195aadc6db</str>
+        <int name="type">0</int>
+        <arr name="owningItem">
+          <str>3084542e-d880-47ce-bfb5-50c19a1aff5b</str>
+        </arr>
+        <arr name="owningColl">
+          <str>24db41d0-51ae-472e-9f41-3319d8aaef2e</str>
+        </arr>
+        <arr name="owningComm">
+          <str>7c40107e-5bf2-48b0-82be-b36df7c1c415</str>
+        </arr>
+        <date name="time">2018-05-03T14:23:00.395Z</date>
+        <arr name="bundleName">
+          <str>THUMBNAIL</str>
+        </arr>
+        <str name="statistics_type">view</str>
+        <str name="uid">0f46bfbf-b7fc-4b2a-bbce-e47d339a3d5b</str>
+        <long name="_version_">1599479565228441600</long></doc>
+    </result>
++++
+
+    continent,isBot,submitter,statistics_type,previousWorkflowStep,city,latitude,type,uid,owningItem,scopeType,countryCode,sortBy,id,owningComm,longitude,owner,scopeId,workflowItemId,ip,query,dns,workflowStep,userAgent,actor,referrer,rpp,_version_,sortOrder,bundleName,time,epersonid,owningColl
+    "",false,,view,,,,0,0f46bfbf-b7fc-4b2a-bbce-e47d339a3d5b,3084542e-d880-47ce-bfb5-50c19a1aff5b,,,,2d6e8422-9858-40bc-9507-5a195aadc6db,7c40107e-5bf2-48b0-82be-b36df7c1c415,,,,,0:0:0:0:0:0:0:1,,localhost.,,"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36",,http://localhost:9080/xmlui/discover?filtertype=author&filter_relational_operator=equals&filter=User%2C+Demo,,1599479565228441600,,THUMBNAIL,2018-05-03T14:23:00.395Z,,24db41d0-51ae-472e-9f41-3319d8aaef2e
+    
 +++
 
 ### List specific fields

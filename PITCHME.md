@@ -349,55 +349,55 @@ Note that Only 10 items are listed
 +++
 #### Sample Data Collection
 
-![Screenshot](disc1.png)
+![Screenshot](images/disc1.png)
 
 +++
 
 #### Sample Item with Image Bitstream - Summary View
 
-![Screenshot](disc2a.png)
+![Screenshot](images/disc2a.png)
 
 +++
 
 #### Sample Item with Image Bitstream - Full View
 
-![Screenshot](disc2b.png)
+![Screenshot](images/disc2b.png)
 
 +++
 
 #### Sample Item with Image Bitstream - Solr View
 
-![Screenshot](disc2c.gif)
+![Screenshot](images/disc2c.gif)
 
 +++
 
 #### Sample Item with Fulltext Bitstream - Summary View
 
-![Screenshot](disc3a.png)
+![Screenshot](images/disc3a.png)
 
 +++
 
 #### Sample Item with Fulltext Bitstream - Full View
 
-![Screenshot](disc3b.png)
+![Screenshot](images/disc3b.png)
 
 +++
 
 #### Sample Item with Fulltext Bitstream - Bitstream View
 
-![Screenshot](disc3c.png)
+![Screenshot](images/disc3c.png)
 
 +++
 
 #### Sample Item with Image Bitstream - Solr View
 
-![Screenshot](disc3d.gif)
+![Screenshot](images/disc3d.gif)
 
 +++
 
 #### Solr Field Analysis - Discovery View
 
-![Screenshot](disc4.png)
+![Screenshot](images/disc4.png)
 
 ---
 ### Schema Browser

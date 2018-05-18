@@ -68,9 +68,11 @@ Comment out the following for testing
 
 - [Sample Stats Records - 5 records](sample-data/statsSmall.csv)
 - [Sample Stats Records - 5000 records](sample-data/stats.csv)
-- This data was pulled from a DSpace 5 test instance
-- Numeric identifiers for item/community/collection are instance specific
-- IP data has been masked
+  - This data was pulled from a DSpace 5 test instance
+  - Numeric identifiers for item/community/collection are instance specific
+  - IP data has been masked
+  - Remove the version column from the CSV file
+- If possible, pull a sample from your own repository
 
 ---
 

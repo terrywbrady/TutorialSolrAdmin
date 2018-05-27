@@ -13,7 +13,7 @@ https://github.com/terrywbrady/info
 
 - Search / Discovery
 - OAI Harvest Index
-- Statistics 
+- Statistics
 - Authority Index (Optional)
 
 +++
@@ -47,7 +47,7 @@ Comment out the following for testing
 ![](images/core.png)
 
 +++
-### Core Overview 
+### Core Overview
 ![](images/tOver.png)
 
 +++
@@ -93,6 +93,10 @@ Note that Only 10 items are listed
         ...
       ]
     }
+
+@[2](total number of records in the statistics core)
+@[3](starting position of the first document)
+@[4-6](10 documents are returned as an array)  
 +++
 
 ### Query All, View Only Item 1
@@ -126,6 +130,15 @@ Note that Only 10 items are listed
       ]
     }
 ```
+@[3](The first item starts in position 0)
+@[5-18](A single document returned)    
+@[6-9](string values)
+@[10](boolean true/false value)
+@[11](date/time value)
+@[12-14](array value)
+@[15-16](string or uuid values)
+@[17](long numeric value)
+
 
 +++
 
@@ -173,6 +186,9 @@ Note that Only 10 items are listed
     }
 ```
 
+@[3](The second item starts in position 1)
+@[12](This is a integer value.  Each class of DSpace objects has a numeric code.)
+
 +++
 
 ### Change Output Format
@@ -209,17 +225,25 @@ Note that Only 10 items are listed
         <str name="statistics_type">view</str>
         <str name="uid">0f46bfbf-b7fc-4b2a-bbce-e47d339a3d5b</str>
         <long name="_version_">1599479565228441600</long></doc>
-    </result>
-```
+    </result
+```    
+
+@[1](Count and starting index are on the root element)
+@[2-5](String values)
+@[6](boolean value)
+@[8](numeric value)   
+@[9-17](array values)
+@[18](date time value)
 
 +++
 
 ```
     continent,isBot,submitter,statistics_type,previousWorkflowStep,city,latitude,type,uid,owningItem,scopeType,countryCode,sortBy,id,owningComm,longitude,owner,scopeId,workflowItemId,ip,query,dns,workflowStep,userAgent,actor,referrer,rpp,_version_,sortOrder,bundleName,time,epersonid,owningColl
     "",false,,view,,,,0,0f46bfbf-b7fc-4b2a-bbce-e47d339a3d5b,3084542e-d880-47ce-bfb5-50c19a1aff5b,,,,2d6e8422-9858-40bc-9507-5a195aadc6db,7c40107e-5bf2-48b0-82be-b36df7c1c415,,,,,0:0:0:0:0:0:0:1,,localhost.,,"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36",,http://localhost:9080/xmlui/discover?filtertype=author&filter_relational_operator=equals&filter=User%2C+Demo,,1599479565228441600,,THUMBNAIL,2018-05-03T14:23:00.395Z,,24db41d0-51ae-472e-9f41-3319d8aaef2e
-    
-```
 
+```
+@[1](CSV headers)
+@[2](csv row of data)
 +++
 
 ### List specific fields
@@ -233,6 +257,22 @@ Note that Only 10 items are listed
 
 +++
 
+```
+    "response": {
+       "numFound": 5290,
+       "start": 1,
+       "docs": [
+         {
+           "type": 4,
+           "time": "2016-01-03T13:33:09.945Z",
+           "statistics_type": "view"
+         }
+       ]
+     }
+```
+@[5-9](A much more readable return object)
++++
+
 ### List 20 items
 
 |name|value|
@@ -241,14 +281,48 @@ Note that Only 10 items are listed
 |start | `0` |
 |rows  | `20` |
 |fl    | `statistics_type, type, time` |
-    
+
 ---
+
++++
+
+```
+"response": {
+    "numFound": 5290,
+    "start": 0,
+    "docs": [
+      {
+        "type": 0,
+        "time": "2015-01-03T13:32:32.506Z",
+        "statistics_type": "view"
+      },
+      {
+        "type": 4,
+        "time": "2016-01-03T13:33:09.945Z",
+        "statistics_type": "view"
+      },
+      {
+        "type": 0,
+        "time": "2017-01-03T13:33:12.771Z",
+        "statistics_type": "view"
+      },
+      {
+        "type": 0,
+        "time": "2018-01-03T13:33:12.804Z",
+        "statistics_type": "view"
+      },
+      ...
+  ]
+}
+```
+@[5-9](Doc 1 -- with type 0 - bitstream)
+@[10-14](Doc 2 -- with type 4 - community)
 
 ### Analyze Fields (Schema Browser)
 
 - statistics_type
 - type    
-    
+
 +++
 
 ### Analyze statistics_type (By Facet)
@@ -440,7 +514,7 @@ Note that Only 10 items are listed
   - PHP Application for Repository Admins
   - Supplements statistics reports in DSpace
   - Additional bot filtering via Solr queries
-  
+
 +++  
 ### Demo: DigitalGeorgetown Statistics Reporting Tool   
 
@@ -590,5 +664,3 @@ The presentation will take a brief tour of the DSpace "search" repository illust
 +++
 
 ![Screenshot](images/discres2.png)
-
-

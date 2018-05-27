@@ -835,6 +835,15 @@ Note that Only 10 items are listed
 |q | `NOT(type:*) AND scopeType:[3 TO 4]` |   
 
 +++
+```
+"response": {
+  "numFound": 27,
+  "start": 0,
+  "docs": []
+}
+
+```
++++
 
 ### Complex Queries - DATE RANGE QUERY
 
@@ -842,6 +851,15 @@ Note that Only 10 items are listed
 |---|---|
 |q | `NOT(type:*) AND time:[NOW-7MONTHS TO NOW]` |   
 
++++
+```
+response": {
+    "numFound": 74,
+    "start": 0,
+    "docs": []
+  }
+```
++++
 ---
 
 ### Our Custom Solr App

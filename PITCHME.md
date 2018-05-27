@@ -337,18 +337,6 @@ Note that Only 10 items are listed
 
 +++
 
-### Type in DSpace
-|Num|Object|
-|---|------|
-|0  |Bitstream|
-|1  |Bundle (of Bitstreams)|
-|2  |Item|
-|3  |Collection|
-|4  |Community|
-|5  |Repository|
-
-+++
-
 ### Analyze statistics_type (By Facet)
 
 |name|value|
@@ -358,6 +346,51 @@ Note that Only 10 items are listed
 |rows       | `0` |
 |facet      | `true` |
 |facet.field| `statistics_type` |
+
++++
+```
+"response": {
+    "numFound": 5290,
+    "start": 0,
+    "docs": []
+  },
+  "facet_counts": {
+    "facet_queries": {},
+    "facet_fields": {
+      "statistics_type": [
+        "view",
+        5202,
+        "search",
+        74,
+        "workflow",
+        14,
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36",
+        0
+      ]
+    },
+    "facet_dates": {},
+    "facet_ranges": {},
+    "facet_intervals": {}
+  }
+```
+@[3](5290 records found)
+@[4](We requested no documents)
+@[5](facet counts are being returned)
+@[7-18](facet value/counts are returned in descending frequency)
+@[8-9](views)
+@[10-11](searches)
+@[12-13](workflow tasks)
++++
+
+### Type in DSpace
+|Num|Object|
+|---|------|
+|0  |Bitstream|
+|1  |Bundle (of Bitstreams)|
+|2  |Item|
+|3  |Collection|
+|4  |Community|
+|5  |Repository|
 
 +++
 
@@ -373,6 +406,44 @@ Note that Only 10 items are listed
 
 +++
 
+```
+"response": {
+    "numFound": 5290,
+    "start": 0,
+    "docs": []
+  },
+  "facet_counts": {
+    "facet_queries": {},
+    "facet_fields": {
+      "type": [
+        "0",
+        2548,
+        "3",
+        2099,
+        "4",
+        341,
+        "2",
+        206,
+        "5",
+        22
+      ]
+    },
+    "facet_dates": {},
+    "facet_ranges": {},
+    "facet_intervals": {}
+  }
+
+```
+@[3](5290 records found)
+@[4](We requested no documents)
+@[9-21](type field values returned in descending order of frequency)
+@[10-11](0 - bitstream actions)
+@[12-13](3 - collection actions)
+@[14-15](4 - community actions)
+@[16-17](2 - item actions)
+@[18-19](5 - repository actions)
++++
+
 ### Analyze time (By Facet)
 
 |name|value|
@@ -383,6 +454,27 @@ Note that Only 10 items are listed
 |facet      | `true` |
 |facet.field| `time` |
 
++++
+
+```
+"facet_counts": {
+    "facet_queries": {},
+    "facet_fields": {
+      "time": [
+        "2018-02-26T15:23:21.105Z",
+        3,
+        "2018-02-26T15:23:22.304Z",
+        3,
+        "2018-02-26T15:23:24.534Z",
+        3,
+        "2018-02-26T16:00:57.788Z",
+        3,
+        ...
+    ]
+  }
+}
+```
+@[4-12](each millisecond has its own entry... this is not very useful)
 ---
 
 ### Adding a Date Facet
@@ -417,6 +509,31 @@ Note that Only 10 items are listed
     &facet.date=time&facet.date.start=NOW/YEAR/DAY-5YEARS&facet.date.end=NOW/YEAR/DAY%2B1YEAR&facet.date.gap=%2B1YEAR
 
 +++
+```
+"facet_counts": {
+    "facet_queries": {},
+    "facet_fields": {},
+    "facet_dates": {
+      "time": {
+        "2013-01-01T00:00:00Z": 0,
+        "2014-01-01T00:00:00Z": 0,
+        "2015-01-01T00:00:00Z": 1,
+        "2016-01-01T00:00:00Z": 1,
+        "2017-01-01T00:00:00Z": 1,
+        "2018-01-01T00:00:00Z": 5287,
+        "gap": "+1YEAR",
+        "start": "2013-01-01T00:00:00Z",
+        "end": "2019-01-01T00:00:00Z"
+      }
+    },
+    "facet_ranges": {},
+    "facet_intervals": {}
+  }
+
+```
+@[12-14](query details interpreted)
+@[6-11](counts by year... I forced some records to past years)
++++
 
 ### Last 12 Months (Raw Query Params)
 
@@ -429,6 +546,37 @@ Note that Only 10 items are listed
 
     &facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH
 
++++
+```
+"facet_counts": {
+    "facet_queries": {},
+    "facet_fields": {},
+    "facet_dates": {
+      "time": {
+        "2017-05-01T00:00:00Z": 0,
+        "2017-06-01T00:00:00Z": 0,
+        "2017-07-01T00:00:00Z": 0,
+        "2017-08-01T00:00:00Z": 0,
+        "2017-09-01T00:00:00Z": 0,
+        "2017-10-01T00:00:00Z": 0,
+        "2017-11-01T00:00:00Z": 0,
+        "2017-12-01T00:00:00Z": 0,
+        "2018-01-01T00:00:00Z": 109,
+        "2018-02-01T00:00:00Z": 2882,
+        "2018-03-01T00:00:00Z": 2129,
+        "2018-04-01T00:00:00Z": 92,
+        "2018-05-01T00:00:00Z": 75,
+        "gap": "+1MONTH",
+        "start": "2017-05-01T00:00:00Z",
+        "end": "2018-06-01T00:00:00Z"
+      }
+    },
+    "facet_ranges": {},
+    "facet_intervals": {}
+  }
+}
+```
+@[6-17](counts for the last 12 months)
 +++
 
 ### Last 6 Quarters (Raw Query Params)
@@ -443,6 +591,32 @@ Note that Only 10 items are listed
     &facet.date=time&facet.date.start=NOW/MONTH/DAY-18MONTHS&facet.date.end=NOW/MONTH/DAY%2B3MONTHS&facet.date.gap=%2B3MONTHS
 
 +++
+```
+"facet_counts": {
+    "facet_queries": {},
+    "facet_fields": {},
+    "facet_dates": {
+      "time": {
+        "2016-11-01T00:00:00Z": 1,
+        "2017-02-01T00:00:00Z": 0,
+        "2017-05-01T00:00:00Z": 0,
+        "2017-08-01T00:00:00Z": 0,
+        "2017-11-01T00:00:00Z": 109,
+        "2018-02-01T00:00:00Z": 5103,
+        "2018-05-01T00:00:00Z": 75,
+        "gap": "+3MONTHS",
+        "start": "2016-11-01T00:00:00Z",
+        "end": "2018-08-01T00:00:00Z"
+      }
+    },
+    "facet_ranges": {},
+    "facet_intervals": {}
+  }
+}  
+```
+@[6-12](counts for the last 18 months by quarter)
+
++++
 
 ### Last 7 Days (Raw Query Params)
 
@@ -454,7 +628,31 @@ Note that Only 10 items are listed
 |facet.date.gap|+1DAY|
 
     &facet.date=time&facet.date.start=NOW/DAY-7DAYS&facet.date.end=NOW/DAY%2B1DAY&facet.date.gap=%2B1DAY
-
++++
+```
+"facet_counts": {
+  "facet_queries": {},
+  "facet_fields": {},
+  "facet_dates": {
+    "time": {
+      "2018-05-20T00:00:00Z": 0,
+      "2018-05-21T00:00:00Z": 0,
+      "2018-05-22T00:00:00Z": 0,
+      "2018-05-23T00:00:00Z": 0,
+      "2018-05-24T00:00:00Z": 0,
+      "2018-05-25T00:00:00Z": 0,
+      "2018-05-26T00:00:00Z": 0,
+      "2018-05-27T00:00:00Z": 0,
+      "gap": "+1DAY",
+      "start": "2018-05-20T00:00:00Z",
+      "end": "2018-05-28T00:00:00Z"
+    }
+  },
+  "facet_ranges": {},
+  "facet_intervals": {}
+}
+```
+@[6-13](counts for the last week by day)
 ---
 
 ### Combining Search with a Date Facet
@@ -469,7 +667,43 @@ Note that Only 10 items are listed
     &facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH
 
 +++
+```
+"response": {
+  "numFound": 74,
+  "start": 0,
+  "docs": []
+},
+"facet_counts": {
+  "facet_queries": {},
+  "facet_fields": {},
+  "facet_dates": {
+    "time": {
+      "2017-05-01T00:00:00Z": 0,
+      "2017-06-01T00:00:00Z": 0,
+      "2017-07-01T00:00:00Z": 0,
+      "2017-08-01T00:00:00Z": 0,
+      "2017-09-01T00:00:00Z": 0,
+      "2017-10-01T00:00:00Z": 0,
+      "2017-11-01T00:00:00Z": 0,
+      "2017-12-01T00:00:00Z": 0,
+      "2018-01-01T00:00:00Z": 1,
+      "2018-02-01T00:00:00Z": 39,
+      "2018-03-01T00:00:00Z": 29,
+      "2018-04-01T00:00:00Z": 2,
+      "2018-05-01T00:00:00Z": 3,
+      "gap": "+1MONTH",
+      "start": "2017-05-01T00:00:00Z",
+      "end": "2018-06-01T00:00:00Z"
+    }
+  },
+  "facet_ranges": {},
+  "facet_intervals": {}
+}
 
+```
+@[2](Notice that our query limited the set of docs to facet)
+@[11-22](Note that the counts are much smaller)
++++
 ### Combining Search with a Date Facet
 
 |name|value|
@@ -482,21 +716,80 @@ Note that Only 10 items are listed
     &facet.date=time&facet.date.start=NOW/MONTH/DAY-12MONTHS&facet.date.end=NOW/MONTH/DAY%2B1MONTH&facet.date.gap=%2B1MONTH
 
 +++
-
-### Complex Queries - NOT Syntax
-
-|name|value|
-|---|---|
-|q | `NOT(statistics_type:*)` |   
-
+```
+"response": {
+    "numFound": 5202,
+    "start": 0,
+    "docs": []
+  },
+  "facet_counts": {
+    "facet_queries": {},
+    "facet_fields": {},
+    "facet_dates": {
+      "time": {
+        "2017-05-01T00:00:00Z": 0,
+        "2017-06-01T00:00:00Z": 0,
+        "2017-07-01T00:00:00Z": 0,
+        "2017-08-01T00:00:00Z": 0,
+        "2017-09-01T00:00:00Z": 0,
+        "2017-10-01T00:00:00Z": 0,
+        "2017-11-01T00:00:00Z": 0,
+        "2017-12-01T00:00:00Z": 0,
+        "2018-01-01T00:00:00Z": 107,
+        "2018-02-01T00:00:00Z": 2837,
+        "2018-03-01T00:00:00Z": 2097,
+        "2018-04-01T00:00:00Z": 88,
+        "2018-05-01T00:00:00Z": 70,
+        "gap": "+1MONTH",
+        "start": "2017-05-01T00:00:00Z",
+        "end": "2018-06-01T00:00:00Z"
+      }
+    },
+    "facet_ranges": {},
+    "facet_intervals": {}
+  }
+```
 +++
 
 ### Complex Queries - NOT Syntax
 
 |name|value|
 |---|---|
-|q | `NOT(type:*)` |   
+|q | `NOT(statistics_type:*)` |   
+|rows|1|
 
++++
+```
+"response": {
+    "numFound": 0,
+    "start": 0,
+    "docs": []
+  },
+}
+```
+@[2](No results - all items have a statistics_type)
++++
+
+### Complex Queries - NOT Syntax
+
+|name|value|
+|---|---|
+|q | `NOT(type:*)` |  
+|rows|1|
+
++++
+```
+"response": {
+    "numFound": 74,
+    "start": 0,
+    "docs": [
+      {
+        "statistics_type": "search"
+      }
+     ]
+    }
+}
+```
 +++
 
 ### Complex Queries - AND Clause
@@ -505,6 +798,34 @@ Note that Only 10 items are listed
 |---|---|
 |q | `NOT(type:*) AND scopeType:3` |   
 
++++
+```
+"response": {
+   "numFound": 15,
+   "start": 0,
+   "docs": [
+     {
+       "uid": "9f59935a-ecb0-47ec-aa52-0977355259bc",
+       "userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36",
+       "query": [
+         "catalog"
+       ],
+       "isBot": false,
+       "time": "2018-02-23T17:41:46.933Z",
+       "scopeType": 3,
+       "scopeId": 141,
+       "epersonid": 0,
+       "dns": "11.222.444.87",
+       "statistics_type": "search",
+       "ip": "11.222.444.87",
+       "referrer": "https://myrepo.myinst.edu/handle/987654321/549449",
+       "_version_": 1601579717295603700
+     }
+   ]
+ }
+
+```
+@[2](A smaller count - this query is looking for searches run in a specific DSpace collection)
 +++
 
 ### Complex Queries - RANGE Query

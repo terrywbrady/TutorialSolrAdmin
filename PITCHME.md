@@ -317,11 +317,35 @@ Note that Only 10 items are listed
 ```
 @[5-9](Doc 1 -- with type 0 - bitstream)
 @[10-14](Doc 2 -- with type 4 - community)
+@[8](All have statistics_type = "view")
+@[8](We'll discover other values)
 
 ### Analyze Fields (Schema Browser)
 
 - statistics_type
 - type    
+
++++
+
+![Screenshot](images/statBrowse1.PNG)
++++
+
+![Screenshot](images/statBrowse2.PNG)
++++
+
+![Screenshot](images/statBrowse3.PNG)
+
++++
+
+### Type in DSpace
+|Num|Object|
+|---|------|
+|0  |Bitstream|
+|1  |Bundle (of Bitstreams)|
+|2  |Item|
+|3  |Collection|
+|4  |Community|
+|5  |Repository|
 
 +++
 

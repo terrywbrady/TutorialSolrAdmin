@@ -910,8 +910,7 @@ response": {
 +++
 ![DigitalGeorgetown Statistics Reporting Tool](images/rptTool.gif)
 
-+++
-<img alt="DigitalGeorgetown Statistics Reporting Tool" src="images/rptTool.gif" style="height:90%"/>
++++?img=images/rptTool.gif
 
 +++
 ![time drop down screenshot](images/statsDD1.png)

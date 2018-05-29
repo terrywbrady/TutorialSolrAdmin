@@ -886,7 +886,6 @@ response": {
     "docs": []
   }
 ```
-+++
 ---
 
 ### Our Custom Solr App
@@ -908,7 +907,11 @@ response": {
 +++  
 ### Demo: DigitalGeorgetown Statistics Reporting Tool   
 
++++
 ![DigitalGeorgetown Statistics Reporting Tool](images/rptTool.gif)
+
++++
+<img alt="DigitalGeorgetown Statistics Reporting Tool" src="images/rptTool.gif" style="height:90%"/>
 
 +++
 ![time drop down screenshot](images/statsDD1.png)
@@ -1093,6 +1096,9 @@ The presentation will take a brief tour of the DSpace "search" repository illust
 |fl | `handle,title` |   
 
 +++
+
+![Screenshot](images/discres2.png)
++++
 ```
 "docs": [
    {
@@ -1103,12 +1109,13 @@ The presentation will take a brief tour of the DSpace "search" repository illust
    }
  ]
 ```
-+++
+---
+### Summary
 
-![Screenshot](images/discres2.png)
+- Try out the Solr Admin Console to learn more about your Repository and applications
 
 ---
-## Thank You
+### Thank You
 
 Terry Brady
 

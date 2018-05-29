@@ -1067,19 +1067,6 @@ The presentation will take a brief tour of the DSpace "search" repository illust
 ![Screenshot](images/discres1.png)
 
 +++
-
-### Search by location.coll and fulltext
-
-|name|value|
-|---|---|
-|q | `location.coll:71cf5a49-4607-4cfe-b395-1ea2d6e6af87 AND fulltext:*` |   
-|fl | `handle,title` |   
-
-+++
-
-![Screenshot](images/discres2.png)
-
-+++
 ```
 "docs": [
   {
@@ -1096,6 +1083,31 @@ The presentation will take a brief tour of the DSpace "search" repository illust
   }
 ]
 ```
++++
+
+### Search by location.coll and fulltext
+
+|name|value|
+|---|---|
+|q | `location.coll:71cf5a49-4607-4cfe-b395-1ea2d6e6af87 AND fulltext:*` |   
+|fl | `handle,title` |   
+
++++
+```
+"docs": [
+   {
+     "handle": "123456789/28",
+     "title": [
+       "Sample item with fulltext bitstream"
+     ]
+   }
+ ]
+```
++++
+
+![Screenshot](images/discres2.png)
+
+---
 ## Thank You
 
 Terry Brady

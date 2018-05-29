@@ -218,6 +218,7 @@ Note that Only 10 items are listed
 
 +++
 
+### XML Example
 ```
     <result name="response" numFound="5389" start="1">
       <doc>
@@ -255,6 +256,7 @@ Note that Only 10 items are listed
 @[18](date time value)
 
 +++
+### CSV Example
 
 ```
     continent,isBot,submitter,statistics_type,previousWorkflowStep,city,latitude,type,uid,owningItem,scopeType,countryCode,sortBy,id,owningComm,longitude,owner,scopeId,workflowItemId,ip,query,dns,workflowStep,userAgent,actor,referrer,rpp,_version_,sortOrder,bundleName,time,epersonid,owningColl
@@ -352,7 +354,13 @@ Note that Only 10 items are listed
 ![Screenshot](images/statBrowse2.PNG)
 +++
 
+![Screenshot](images/statBrowse2a.PNG)
++++
+
 ![Screenshot](images/statBrowse3.PNG)
++++
+
+![Screenshot](images/statBrowse3a.PNG)
 
 +++
 
@@ -902,6 +910,15 @@ response": {
 
 ![DigitalGeorgetown Statistics Reporting Tool](images/rptTool.gif)
 
++++
+![time drop down screenshot](images/statsDD1.png)
+
++++
+![query drop down screenshot](images/statsDD2.png)
+
++++
+![user auth drop down screenshot](images/statsDD3.png)
+
 +++?code=https://raw.githubusercontent.com/Georgetown-University-Libraries/batch-tools/master/web/stats/solrFacets.php&lang=php
 @[16-20](Date Query Construction)
 @[21-25](Date Query Construction)
@@ -1022,6 +1039,21 @@ The presentation will take a brief tour of the DSpace "search" repository illust
 ![Screenshot](images/discres0.png)
 
 +++
+```
+"docs": [
+  {
+    "handle": "123456789/27",
+    "location.coll": [
+      "71cf5a49-4607-4cfe-b395-1ea2d6e6af87"
+    ],
+    "title": [
+      "Sample item with image bitstream"
+    ]
+  }
+]
+```
+
++++
 
 ### Search by location.coll
 
@@ -1046,3 +1078,30 @@ The presentation will take a brief tour of the DSpace "search" repository illust
 +++
 
 ![Screenshot](images/discres2.png)
+
++++
+```
+"docs": [
+  {
+    "handle": "123456789/28",
+    "title": [
+      "Sample item with fulltext bitstream"
+    ]
+  },
+  {
+    "handle": "123456789/27",
+    "title": [
+      "Sample item with image bitstream"
+    ]
+  }
+]
+```
+## Thank You
+
+Terry Brady
+
+Georgetown University Library
+
+https://github.com/terrywbrady/info
+
+![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)

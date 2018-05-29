@@ -47,16 +47,34 @@ Comment out the following for testing
 ![](images/core.png)
 
 +++
+![](images/core1.png)
+
++++
 ### Core Overview
 ![](images/tOver.png)
+
++++
+![](images/tOver1.png)
 
 +++
 ### Core Query
 ![](images/tQuery.png)
 
 +++
+![](images/tQuery1.png)
+
++++
+![](images/tQuery2.png)
+
++++
 ### Schema Browser
 ![](images/tSchema.png)
+
++++
+![](images/tSchema1.png)
+
++++
+![](images/tSchema2.png)
 
 +++
 ### Document Add (for testing)
@@ -86,6 +104,7 @@ Note that Only 10 items are listed
 
 +++
 
+```
     "response": {
       "numFound": 5389,
       "start": 0,
@@ -93,7 +112,7 @@ Note that Only 10 items are listed
         ...
       ]
     }
-
+```
 @[2](total number of records in the statistics core)
 @[3](starting position of the first document)
 @[4-6](10 documents are returned as an array)  
@@ -282,8 +301,6 @@ Note that Only 10 items are listed
 |rows  | `20` |
 |fl    | `statistics_type, type, time` |
 
----
-
 +++
 
 ```
@@ -319,6 +336,8 @@ Note that Only 10 items are listed
 @[10-14](Doc 2 -- with type 4 - community)
 @[8](All have statistics_type = "view")
 @[8](We'll discover other values)
+
+---
 
 ### Analyze Fields (Schema Browser)
 

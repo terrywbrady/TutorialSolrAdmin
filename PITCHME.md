@@ -245,15 +245,15 @@ Note that Only 10 items are listed
         <str name="statistics_type">view</str>
         <str name="uid">0f46bfbf-b7fc-4b2a-bbce-e47d339a3d5b</str>
         <long name="_version_">1599479565228441600</long></doc>
-    </result
+    </result>
 ```    
 
 @[1](Count and starting index are on the root element)
-@[2-5](String values)
-@[6](boolean value)
-@[8](numeric value)   
-@[9-17](array values)
-@[18](date time value)
+@[3-6](String values)
+@[7](boolean value)
+@[9](numeric value)   
+@[10-18](array values)
+@[19](date time value)
 
 +++
 ### CSV Example
@@ -364,6 +364,18 @@ Note that Only 10 items are listed
 
 +++
 
+### Type in DSpace
+|Num|Object|
+|---|------|
+|0  |Bitstream|
+|1  |Bundle (of Bitstreams)|
+|2  |Item|
+|3  |Collection|
+|4  |Community|
+|5  |Repository|
+
++++
+
 ### Analyze statistics_type (By Facet)
 
 |name|value|
@@ -403,21 +415,10 @@ Note that Only 10 items are listed
 @[3](5290 records found)
 @[4](We requested no documents)
 @[5](facet counts are being returned)
-@[7-18](facet value/counts are returned in descending frequency)
-@[8-9](views)
-@[10-11](searches)
-@[12-13](workflow tasks)
-+++
-
-### Type in DSpace
-|Num|Object|
-|---|------|
-|0  |Bitstream|
-|1  |Bundle (of Bitstreams)|
-|2  |Item|
-|3  |Collection|
-|4  |Community|
-|5  |Repository|
+@[9-18](facet value/counts are returned in descending frequency)
+@[10-11](views)
+@[12-13](searches)
+@[14-15](workflow tasks)
 
 +++
 
@@ -776,6 +777,7 @@ Note that Only 10 items are listed
     "facet_intervals": {}
   }
 ```
+@[11-22](Counts by month)
 +++
 
 ### Complex Queries - NOT Syntax

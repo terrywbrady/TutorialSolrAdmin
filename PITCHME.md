@@ -912,8 +912,6 @@ response": {
 +++
 ![DigitalGeorgetown Statistics Reporting Tool](images/rptTool.gif)
 
-+++?image=images/rptTool.gif&size=auto 90%
-
 +++
 ![time drop down screenshot](images/statsDD1.png)
 

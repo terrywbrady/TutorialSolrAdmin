@@ -412,9 +412,9 @@ Note that Only 10 items are listed
     "facet_intervals": {}
   }
 ```
-@[3](5290 records found)
-@[4](We requested no documents)
-@[5](facet counts are being returned)
+@[2](5290 records found)
+@[3](We requested no documents)
+@[6](facet counts are being returned)
 @[9-18](facet value/counts are returned in descending frequency)
 @[10-11](views)
 @[12-13](searches)

@@ -1,4 +1,4 @@
-## Examining Your Repository under the Hood from the Solr Admin Console
+### Examining Your Repository under the Hood from the Solr Admin Console
 
 Terry Brady
 
